@@ -1,0 +1,5 @@
+@use "partials/variables";
+
+body{
+    background-color: variables.$backgroundColor;
+}
