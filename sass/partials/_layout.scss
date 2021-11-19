@@ -1,0 +1,24 @@
+*{
+    font-family: $fontPrimary;
+    margin: 0; 
+    padding: 0;
+    box-sizing: border-box;
+    border: none; outline: none;
+    text-decoration: none;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+    font-size: 100%;
+}
+
+body{
+    background-color: $backgroundColor;
+}
+
+ul li {
+    list-style: none;
+}
+

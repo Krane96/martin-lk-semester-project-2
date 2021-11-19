@@ -1,5 +1,8 @@
-@use "partials/variables";
+@import "partials/variables";
+@import "partials/layout";
+@import "partials/typography";
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/media-queries";
 
-body{
-    background-color: variables.$backgroundColor;
-}
