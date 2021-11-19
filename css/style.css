@@ -89,7 +89,7 @@ h4 {
   margin: auto 4px;
 }
 
-#search-icon:hover, #cart-icon:hover, #user-icon:hover {
+.icons:hover {
   color: #F5CB5C;
   -webkit-transition: 0.3s linear;
   transition: 0.3s linear;
@@ -170,6 +170,12 @@ span {
     margin: 1rem;
     padding: 0.5rem;
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 80%;
   }
 }
 /*# sourceMappingURL=style.css.map */

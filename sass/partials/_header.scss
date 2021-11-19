@@ -48,7 +48,7 @@
 #search-icon,#cart-icon,#user-icon,#menu-icon {
     margin: auto 4px;
 }
-#search-icon:hover, #cart-icon:hover, #user-icon:hover{
+.icons:hover{
     color: $hoverLinkColor;
     transition: 0.3s linear;
     transform: scale(1.3);
