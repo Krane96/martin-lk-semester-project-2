@@ -22,3 +22,90 @@ ul li {
     list-style: none;
 }
 
+button {
+    padding: 0.65rem;
+    text-transform: capitalize;
+    font-size: 1rem;
+    border-radius: 3px;
+}
+
+
+
+//products
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5rem;
+    max-width: 1100px;
+    margin: 10rem auto;
+    justify-items: center;
+}
+
+.product-card{
+    height: 400px;
+    width: 300px;
+    padding: 1rem;
+    justify-content: center;
+    align-items: flex-end;
+    background-position: center -5%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.grid-card{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    width: 100%;
+}
+
+
+.product-card:nth-child(1){
+    background-image: linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)), url(/images/png-gold.png);
+}
+
+.product-card:nth-child(2){
+    background-image: url(/images/png-pvp.png);
+}
+.product-card:nth-child(3){
+    background-image: url(/images/png-rogue.png);
+}
+.product-card:nth-child(4){
+    background-image: url(/images/png-illidan.png);
+}
+
+.product-card p{
+    margin: 1rem 0;
+    grid-row: 2;
+    grid-column: 1/4;
+}
+.product-card button{
+    background: linear-gradient($hoverLinkColor,$hoverLinkColor);
+    font-family: $fontHeadings;
+    font-weight: 600;
+    grid-row: 3;
+    grid-column: 2/4;
+    width: 100%;
+}
+
+.product-card h3{
+    grid-row: 1;
+    grid-column: 1/4;
+
+}
+.product-card span{
+ grid-row: 3;
+ grid-column: 1/2;
+ color: $smallHeaderColor;
+}
+
+
+
+
+
+
+// linear-gradient( 180deg, rgba(10, 20, 35, 0) 0%, rgba(29, 38, 52, 0.81) 61.98%)
