@@ -17,7 +17,8 @@ html {
 }
 
 body {
-  background-color: #1d1d1d;
+  background-color: #001524;
+  color: #E8EDDF;
 }
 
 ul li {
@@ -26,7 +27,7 @@ ul li {
 
 button {
   padding: 0.65rem;
-  text-transform: capitalize;
+  text-transform: none;
   font-size: 1rem;
   border-radius: 3px;
 }
@@ -52,7 +53,7 @@ button {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  background-position: center -5%;
+  background-position: center 15%;
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
@@ -61,6 +62,13 @@ button {
   display: flex;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.product-card:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .grid-card {
@@ -75,20 +83,33 @@ button {
 }
 
 .product-card:nth-child(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-gold.png);
-  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-gold.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.329)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.329), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(2) {
-  background-image: url(/images/png-pvp.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(3) {
-  background-image: url(/images/png-rogue.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(4) {
-  background-image: url(/images/png-illidan.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
+}
+
+.product-card:nth-child(5) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
+}
+
+.product-card:nth-child(6) {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.219)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.219), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card p {
@@ -101,8 +122,8 @@ button {
 }
 
 .product-card button {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5CB5C), to(#F5CB5C));
-  background: linear-gradient(#F5CB5C, #F5CB5C);
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5CB5C), to(rgba(109, 97, 48, 0.89)));
+  background: linear-gradient(#F5CB5C, rgba(109, 97, 48, 0.89));
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   -ms-grid-row: 3;
@@ -111,6 +132,8 @@ button {
   -ms-grid-column-span: 2;
   grid-column: 2/4;
   width: 100%;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .product-card h3 {
@@ -149,6 +172,11 @@ p {
   font-family: "Open Sans", sans-serif;
 }
 
+@font-face {
+  font-family: wow;
+  src: url(/fonts/LifeCraft_Font.ttf);
+}
+
 .header-wrapper {
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
@@ -167,12 +195,29 @@ p {
   max-width: 1200px;
 }
 
-.header .logo img {
-  height: 3.2rem;
+.logo span {
+  font-family: wow;
+  font-size: 0.8em;
+  margin: 0;
 }
 
 .header .logo {
   padding: 1.2rem 20px;
+  font-family: wow;
+  color: white;
+  font-size: 1.6em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  letter-spacing: 1px;
 }
 
 .navigation a {
@@ -227,17 +272,23 @@ footer {
   margin-top: 70rem;
 }
 
+.footer-row-1 {
+  padding: 2rem 0;
+  border-top: 1px solid #ffffff80;
+}
+
 .footer-menu {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   max-width: 1200px;
   margin: 0 auto;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -ms-flex-line-pack: start;
       align-content: start;
+  height: 300px;
 }
 
 .footer-menu h4 {
@@ -262,6 +313,38 @@ span {
 
 .socials span, .contact-menu span {
   font-size: 1.5rem;
+}
+
+.wow-font, .wow-font span {
+  font-family: wow;
+}
+
+.copyright-section h4 {
+  color: #E8EDDF;
+  letter-spacing: 3px;
+  opacity: 0.6;
+}
+
+.wow-font span {
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.wow-font {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.copyright-section p {
+  max-width: 200px;
+  opacity: 0.6;
+  padding: 0 1rem;
 }
 
 @media (max-width: 991px) {

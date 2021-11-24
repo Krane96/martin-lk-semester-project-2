@@ -1,16 +1,19 @@
 footer{
     position: relative;
     margin-top: 70rem;
-    
 }
-
+.footer-row-1{
+ padding: 2rem 0;
+    border-top: 1px solid $thinGrayColor;
+}
 
 .footer-menu{
     display: flex;
     max-width: 1200px;
     margin: 0 auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-content: start;
+    height: 300px;
 }
 
 .footer-menu h4{
@@ -32,4 +35,28 @@ span{
 }
 .socials span, .contact-menu span{
     font-size: 1.5rem;
+}
+
+.wow-font, .wow-font span{
+    font-family: wow;
+}
+.copyright-section h4{
+    color: $textColor;
+    letter-spacing: 3px;
+    opacity: 0.6;
+}
+.wow-font span{
+    margin: 0;
+    padding: 0.3rem;
+}
+.wow-font{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.copyright-section p{
+    max-width: 200px;
+    opacity: 0.6;
+    padding: 0 1rem;
 }

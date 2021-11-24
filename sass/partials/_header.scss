@@ -1,3 +1,8 @@
+@font-face {
+    font-family: wow;
+    src: url(/fonts/LifeCraft_Font.ttf);
+}
+
 .header-wrapper{
     border-bottom: $border;
 }
@@ -10,12 +15,22 @@
    
 }
 
-.header .logo img{
-    height: 3.2rem;
+.logo span{
+    font-family: wow;
+    font-size: 0.8em;
+    margin: 0;
 }
 
 .header .logo{
     padding: 1.2rem 20px;
+    font-family: wow;
+    color: white;
+    font-size: 1.6em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    letter-spacing: 1px;
 }
 
 .navigation a{

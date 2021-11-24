@@ -16,6 +16,7 @@ html{
 
 body{
     background-color: $backgroundColor;
+    color: $textColor;
 }
 
 ul li {
@@ -24,7 +25,7 @@ ul li {
 
 button {
     padding: 0.65rem;
-    text-transform: capitalize;
+    text-transform: none;
     font-size: 1rem;
     border-radius: 3px;
 }
@@ -48,12 +49,16 @@ button {
     padding: 1rem;
     justify-content: center;
     align-items: flex-end;
-    background-position: center -5%;
+    background-position: center 15%;
     background-repeat: no-repeat;
     background-size: 100%;
     position: relative;
     display: flex;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.product-card:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
 }
 
 .grid-card{
@@ -65,17 +70,23 @@ button {
 
 
 .product-card:nth-child(1){
-    background-image: linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)), url(/images/png-gold.png);
+    background-image: linear-gradient(rgba(48, 39, 59, 0.329),rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(2){
-    background-image: url(/images/png-pvp.png);
+    background-image:linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 .product-card:nth-child(3){
-    background-image: url(/images/png-rogue.png);
+    background-image:linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 .product-card:nth-child(4){
-    background-image: url(/images/png-illidan.png);
+    background-image: linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)),url(/images/png-rogue.png);
+}
+.product-card:nth-child(5){
+    background-image: linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)),url(/images/png-rogue.png);
+}
+.product-card:nth-child(6){
+    background-image: linear-gradient(rgba(48, 39, 59, 0.219),rgba(53, 34, 114, 0.342)),url(/images/png-rogue.png);
 }
 
 .product-card p{
@@ -84,12 +95,13 @@ button {
     grid-column: 1/4;
 }
 .product-card button{
-    background: linear-gradient($hoverLinkColor,$hoverLinkColor);
+    background: linear-gradient($hoverLinkColor, rgba(109, 97, 48, 0.89));
     font-family: $fontHeadings;
     font-weight: 600;
     grid-row: 3;
     grid-column: 2/4;
     width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .product-card h3{
