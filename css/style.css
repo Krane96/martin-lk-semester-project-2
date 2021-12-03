@@ -683,8 +683,8 @@ span {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
-  .hero-png img {
-    width: 20%;
+  .hero-content {
+    padding: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
