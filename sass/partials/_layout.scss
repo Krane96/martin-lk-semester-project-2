@@ -17,6 +17,7 @@ html{
 body{
     background-color: $backgroundColor;
     color: $textColor;
+    
 }
 
 ul li {
@@ -31,16 +32,141 @@ button {
 }
 
 
+//header / hero section
+
+.header{
+    position: relative;
+}
+
+.hero-header-container img{
+    max-height: 1100px;
+}
+
+.hero-header-container h1{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    width: 100%;
+}
+.hero-header-container{
+    position: absolute;
+    width: 100%;
+    overflow: hidden;
+    opacity: .3;
+}
+
+.hero-header-container .image-fade:before {
+    content: '';
+    background-image: linear-gradient(to top, #001524, rgba(239, 239, 239, 0));
+    position: absolute;
+    height: 1000px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .hero-header-container .image-fade:after {
+    content: '';
+    display: block;
+  }
+  .image-fade img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    width: 100%;
+  }
+ 
+.hero-content{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 13rem;
+    padding: 1.4rem;
+}
+.hero-text{
+    display: grid;
+    grid-gap: 1rem;
+    grid-column: 1/5;
+}
+.hero-text span{
+    color: $hoverLinkColor;
+}
+
+.hero-text h1{
+    text-transform: uppercase;
+    font-size: 2.4em;
+    font-family: $fontPrimary;
+    color: $textColor;
+}
+.hero-text p{
+    font-family: $fontSecondary;
+    font-size: 1.2em;
+    color: $smallHeaderColor;
+}
+.hero-text button{
+    margin-top: 3rem;
+    width: 220px;
+    padding: .9rem;
+    background: none;
+    border: 2px solid $hoverLinkColor;
+    color: $textColor;
+    cursor: pointer;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.hero-text button:hover,
+.hero-text button:focus {
+    transition: 0.2s linear;
+    box-shadow: 0 0.6em 0.6em -0.4em $hoverLinkColor;
+    transform: translateY(-0.25em);
+    background: rgba(204, 184, 0, 0.9);
+}
+.hero-png img{
+    width: 120%;
+    margin-left: -2rem;
+    opacity: .8;
+}
+.hero-png{
+    grid-column: 5/9;
+    margin-top: -2rem;
+}
+.hero-buttons button:first-of-type{
+    background:  rgba(204, 184, 0, 0.9);
+   
+}
+.hero-buttons button:last-of-type{
+    margin-left: 1.5rem;
+}
+.hero-buttons button:first-of-type:hover {
+    transition: 0.2s linear;
+    box-shadow: 0 0.6em 0.6em -0.4em $hoverLinkColor;
+    transform: translateY(-0.25em);
+    background: none;
+}
+.current{
+    opacity: .8;
+}
 
 //products
+.featured-products-header{
+    max-width: 1100px;
+    margin: 12rem auto 3rem auto;
+    padding: .4rem;
+    margin-top: 20rem;
+    position: relative;
+}
 
 .products-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5rem;
     max-width: 1100px;
-    margin: 10rem auto;
+    margin: auto;
     justify-items: center;
+   
 }
 
 .product-card{
@@ -54,7 +180,8 @@ button {
     background-size: 100%;
     position: relative;
     display: flex;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+    cursor: pointer;
 }
 .product-card:hover{
     transition: 0.4s;
@@ -70,7 +197,7 @@ button {
 
 
 .product-card:nth-child(1){
-    background-image: linear-gradient(rgba(48, 39, 59, 0.329),rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
+    background-image: linear-gradient(rgba(48, 39, 59, 0.29),rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(2){
@@ -102,6 +229,7 @@ button {
     grid-column: 2/4;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    cursor: pointer;
 }
 
 .product-card h3{
@@ -121,3 +249,126 @@ button {
 
 
 // linear-gradient( 180deg, rgba(10, 20, 35, 0) 0%, rgba(29, 38, 52, 0.81) 61.98%)
+
+.background-wrapper{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10rem auto;
+    
+}
+.background-wrapper::before{
+    content: '';
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4),rgba(0, 0, 0, 0.4)), url(/images/header.jfif);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.2;
+}
+
+
+
+
+// Login page
+
+.login-page-wrapper{
+    position: relative; 
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-page-wrapper::before{
+    content: '';
+    background-image: url(/images/wp5477469-world-of-warcraft-shadowlands-wallpapers.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.4;
+}
+
+.login-container{
+    position: relative;
+    padding: 4rem 2rem;
+    background: linear-gradient(rgba(48, 39, 59, 0.29),rgba(53, 34, 114, 0.2));
+    width: 450px;
+    border-radius: 5px;
+    box-shadow: 7px 7px 60px rgb(0, 0, 0);
+}
+.login-container h1{
+    text-transform: uppercase;
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.input-container input{
+    width: 100%;
+    display: block;
+    padding: 0.7rem;
+    border: none;
+    outline: none;
+    margin: .5rem 0;
+    font-size: 1.2em;
+    background-color: rgba(255, 255, 255, 0.808);
+    border-radius: 3px;
+}
+
+.input-container input:focus{
+    transition: 0.1s linear;
+    outline: 1px solid #ffd60a;
+    box-shadow: 0 0 8px #ffd60a;
+
+}
+
+.input-container button{
+    text-transform: uppercase;
+    font-size: 1.4em;
+    font-weight: 500;
+    width: 100%;
+    margin-top: 1.5rem;
+    background: $hoverLinkColor;
+    letter-spacing: 1px;
+
+}
+
+.input-container button:hover{
+    transition: 0.4s;
+    cursor: pointer;
+}
+form span{
+    opacity: .8;
+}
+
+span input{
+    margin-top: .5rem;
+}
+
+form label{
+    font-size: 1.3em;
+}
+
+.message{
+    padding: .7rem .2rem;
+    text-align: center;
+    background-color: #bc4749;
+    border-radius: 2px;
+    font-weight: bold;
+}

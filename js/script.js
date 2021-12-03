@@ -1,7 +1,7 @@
-import {strapiURL } from "./settings/strapi.js";
-import { createHTML } from "./components/products.js";
+import { strapiURL } from "./settings/strapi.js";
+import { createHTML } from "./products.js";
 
-const heroURL = strapiURL + "home";
+const heroURL = strapiURL + "banner";
 const productsURL = strapiURL + "products";
 
 
@@ -42,39 +42,26 @@ function createHero(hero){
     const headerElement = document.querySelector('.hero-header-container');
 
         headerElement.innerHTML += ` 
-        <img src="" alt="hero header">
-        ${hero.image}
-        </img>`;
+        <div class="image-fade">
+        <img src="${hero.image_url}" alt="hero header">
+        
+        </img>
+        </div>
+        `;
     
 }
 
     
 
-
-
-
-
-
-
-
-
-
 /*
-   heroContainer.innerHTML =     
-   `<img src="">${strapiProducts.hero_banner.image}</img>`
-   const heroContainer = document.querySelector('.hero-container');
-   heroContainer.innerHTML = "";
+
+document.querySelector('.user-icon').onclick = () => {
+    const loginDisplay = document.querySelector('.login-container');
+    loginDisplay.classList.toggle('login-visible')
+    
+}
+
 */
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -95,4 +82,9 @@ let navigation = document.querySelector('.navigation');
 document.querySelector('.menu-icon').onclick = () =>{
     console.log(event);
     navigation.classList.toggle('active')
+}
+
+
+let loginButtonNav = document.querySelector('.hero-buttons button').onclick = () => {
+    window.location.href = "login.html";
 }

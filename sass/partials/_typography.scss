@@ -1,17 +1,25 @@
 h4{
     font-family: $fontSecondary;
-    font-size: 1.4rem;
+    font-size: 1.4em;
 }
 
 h3{
     font-family: $fontSecondary;
-    font-size: 1.6rem;
+    font-size: 1.6em;
     color: $textColor;
     text-transform: capitalize;
     letter-spacing: 1px;
 }
 p{
-    font-size: 1rem;
+    font-size: 1em;
     color:  $smallHeaderColor;
     font-family: $fontHeadings;
+}
+h2{
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: $fontSecondary;
+    font-weight: 500;
+    color:  white;
 }

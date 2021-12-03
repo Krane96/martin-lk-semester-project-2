@@ -32,6 +32,157 @@ button {
   border-radius: 3px;
 }
 
+.header {
+  position: relative;
+}
+
+.hero-header-container img {
+  max-height: 1100px;
+}
+
+.hero-header-container h1 {
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-header-container {
+  position: absolute;
+  width: 100%;
+  overflow: hidden;
+  opacity: .3;
+}
+
+.hero-header-container .image-fade:before {
+  content: '';
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#001524), to(rgba(239, 239, 239, 0)));
+  background-image: linear-gradient(to top, #001524, rgba(239, 239, 239, 0));
+  position: absolute;
+  height: 1000px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-header-container .image-fade:after {
+  content: '';
+  display: block;
+}
+
+.image-fade img {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  width: 100%;
+}
+
+.hero-content {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[8];
+      grid-template-columns: repeat(8, 1fr);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 13rem;
+  padding: 1.4rem;
+}
+
+.hero-text {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 4;
+  grid-column: 1/5;
+}
+
+.hero-text span {
+  color: #F5CB5C;
+}
+
+.hero-text h1 {
+  text-transform: uppercase;
+  font-size: 2.4em;
+  font-family: "Montserrat", sans-serif;
+  color: #E8EDDF;
+}
+
+.hero-text p {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 1.2em;
+  color: #CFDBD5;
+}
+
+.hero-text button {
+  margin-top: 3rem;
+  width: 220px;
+  padding: .9rem;
+  background: none;
+  border: 2px solid #F5CB5C;
+  color: #E8EDDF;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-size: 1.3em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.hero-text button:hover,
+.hero-text button:focus {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-box-shadow: 0 0.6em 0.6em -0.4em #F5CB5C;
+          box-shadow: 0 0.6em 0.6em -0.4em #F5CB5C;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  background: rgba(204, 184, 0, 0.9);
+}
+
+.hero-png img {
+  width: 120%;
+  margin-left: -2rem;
+  opacity: .8;
+}
+
+.hero-png {
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 4;
+  grid-column: 5/9;
+  margin-top: -2rem;
+}
+
+.hero-buttons button:first-of-type {
+  background: rgba(204, 184, 0, 0.9);
+}
+
+.hero-buttons button:last-of-type {
+  margin-left: 1.5rem;
+}
+
+.hero-buttons button:first-of-type:hover {
+  -webkit-transition: 0.2s linear;
+  transition: 0.2s linear;
+  -webkit-box-shadow: 0 0.6em 0.6em -0.4em #F5CB5C;
+          box-shadow: 0 0.6em 0.6em -0.4em #F5CB5C;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  background: none;
+}
+
+.current {
+  opacity: .8;
+}
+
+.featured-products-header {
+  max-width: 1100px;
+  margin: 12rem auto 3rem auto;
+  padding: .4rem;
+  margin-top: 20rem;
+  position: relative;
+}
+
 .products-container {
   display: -ms-grid;
   display: grid;
@@ -39,7 +190,7 @@ button {
       grid-template-columns: repeat(3, 1fr);
   grid-gap: 5rem;
   max-width: 1100px;
-  margin: 10rem auto;
+  margin: auto;
   justify-items: center;
 }
 
@@ -60,8 +211,9 @@ button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+          box-shadow: rgba(0, 0, 0, 0.4) 0px 3px 8px;
+  cursor: pointer;
 }
 
 .product-card:hover {
@@ -83,8 +235,8 @@ button {
 }
 
 .product-card:nth-child(1) {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.329)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
-  background-image: linear-gradient(rgba(48, 39, 59, 0.329), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(53, 34, 114, 0.342))), url(/images/png-rogue.png);
+  background-image: linear-gradient(rgba(48, 39, 59, 0.29), rgba(53, 34, 114, 0.342)), url(/images/png-rogue.png);
 }
 
 .product-card:nth-child(2) {
@@ -134,6 +286,7 @@ button {
   width: 100%;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  cursor: pointer;
 }
 
 .product-card h3 {
@@ -153,32 +306,173 @@ button {
   color: #CFDBD5;
 }
 
+.background-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 10rem auto;
+}
+
+.background-wrapper::before {
+  content: '';
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4))), url(/images/header.jfif);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/images/header.jfif);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+}
+
+.login-page-wrapper {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.login-page-wrapper::before {
+  content: '';
+  background-image: url(/images/wp5477469-world-of-warcraft-shadowlands-wallpapers.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.4;
+}
+
+.login-container {
+  position: relative;
+  padding: 4rem 2rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(53, 34, 114, 0.2)));
+  background: linear-gradient(rgba(48, 39, 59, 0.29), rgba(53, 34, 114, 0.2));
+  width: 450px;
+  border-radius: 5px;
+  -webkit-box-shadow: 7px 7px 60px black;
+          box-shadow: 7px 7px 60px black;
+}
+
+.login-container h1 {
+  text-transform: uppercase;
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.input-container input {
+  width: 100%;
+  display: block;
+  padding: 0.7rem;
+  border: none;
+  outline: none;
+  margin: .5rem 0;
+  font-size: 1.2em;
+  background-color: rgba(255, 255, 255, 0.808);
+  border-radius: 3px;
+}
+
+.input-container input:focus {
+  -webkit-transition: 0.1s linear;
+  transition: 0.1s linear;
+  outline: 1px solid #ffd60a;
+  -webkit-box-shadow: 0 0 8px #ffd60a;
+          box-shadow: 0 0 8px #ffd60a;
+}
+
+.input-container button {
+  text-transform: uppercase;
+  font-size: 1.4em;
+  font-weight: 500;
+  width: 100%;
+  margin-top: 1.5rem;
+  background: #F5CB5C;
+  letter-spacing: 1px;
+}
+
+.input-container button:hover {
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+form span {
+  opacity: .8;
+}
+
+span input {
+  margin-top: .5rem;
+}
+
+form label {
+  font-size: 1.3em;
+}
+
+.message {
+  padding: .7rem .2rem;
+  text-align: center;
+  background-color: #bc4749;
+  border-radius: 2px;
+  font-weight: bold;
+}
+
 h4 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.4rem;
+  font-size: 1.4em;
 }
 
 h3 {
   font-family: "Fira Sans", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.6em;
   color: #E8EDDF;
   text-transform: capitalize;
   letter-spacing: 1px;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1em;
   color: #CFDBD5;
   font-family: "Open Sans", sans-serif;
+}
+
+h2 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  color: white;
 }
 
 @font-face {
   font-family: wow;
   src: url(/fonts/LifeCraft_Font.ttf);
-}
-
-.header-wrapper {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .header {
@@ -238,7 +532,7 @@ p {
   padding-right: 10px;
 }
 
-.header-wrapper .header .navigation-icons {
+.header .navigation-icons {
   color: #E8EDDF;
   cursor: pointer;
   font-size: 1.5rem;
@@ -269,7 +563,7 @@ p {
 
 footer {
   position: relative;
-  margin-top: 70rem;
+  margin-top: 10rem;
 }
 
 .footer-row-1 {
