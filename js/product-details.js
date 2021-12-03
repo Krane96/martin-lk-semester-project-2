@@ -2,7 +2,7 @@
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 
-const url = 'http://localhost:1337/products/${id}';
+const url = `http://localhost:1337/products/${id}`;
 
 fetch(url)
 .then(response => response.json())
@@ -18,16 +18,16 @@ const productDetail = document.querySelector(".product-detail-container");
 function createProductDetails (product) {
     
     let content = `
-     <div class="blog-post-container">
-      
-     <h1>${product.title}</h1>
-     ${product}
+    <h2>${product.title}</h2>
+     <div class="product">
+     ${product.description}
+     ${product.price}
     
      <a href="products.html">&#10094; Back</a>
     </div>
 `
 productDetail.innerHTML = content;
-document.title =  "Product: " +  product.title;
+
 };
 
 
