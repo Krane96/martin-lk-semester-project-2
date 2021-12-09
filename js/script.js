@@ -1,5 +1,8 @@
 import { strapiURL } from "./settings/strapi.js";
 import { createHTML } from "./products.js";
+import { shoppingCartHTML } from "./settings/const_to_export.js";
+import { shoppingCartToggle } from "./settings/const_to_export.js";
+import { showAndHideCart } from "./components/get_cart_items.js";
 
 const heroURL = strapiURL + "banner";
 const productsURL = strapiURL + "products";
@@ -25,7 +28,9 @@ async function getStrapi() {
 
         
         createHTML(strapiProducts); 
-        createHero(strapiHero);   
+        createHero(strapiHero);
+        shoppingCartHTML();
+        showAndHideCart();   
     } catch (error) {
         console.log(error);
     }
@@ -76,8 +81,9 @@ document.querySelector('.user-icon').onclick = () => {
 
 
 
-/* Navigation responsiveness */
+/* Navigation */
 let navigation = document.querySelector('.navigation');
+
 
 document.querySelector('.menu-icon').onclick = () =>{
     console.log(event);
@@ -85,6 +91,9 @@ document.querySelector('.menu-icon').onclick = () =>{
 }
 
 
+
+
 let loginButtonNav = document.querySelector('.hero-buttons button').onclick = () => {
     window.location.href = "login.html";
 }
+

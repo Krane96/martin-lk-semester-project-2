@@ -133,7 +133,7 @@ button {
     grid-column: 5/9;
     margin-top: -2rem;
 }
-.hero-buttons button:first-of-type{
+.hero-buttons button:last-of-type{
     background:  rgba(204, 184, 0, 0.9);
    
 }
@@ -252,7 +252,7 @@ button {
 
 .background-wrapper{
     position: relative; 
-    height: 100vh;
+    height: 80vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -371,4 +371,163 @@ form label{
     background-color: #bc4749;
     border-radius: 2px;
     font-weight: bold;
+}
+
+
+// Product detail
+.product-detail-container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 1000px;
+}
+.product-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1rem;
+    grid-gap: 2rem;
+}
+.product-image{
+    grid-row: 1;
+    grid-column: 1/3;
+    box-shadow: 2px 2px 4px 4px black;
+}
+.product-image img{
+    width: 100%;
+}
+.product-choices{
+    grid-row: 1;
+    grid-column: 3/3;
+    box-shadow: 2px 2px 4px 4px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.product-choices h4{
+    text-align: center;
+    margin-top: .8rem;
+    margin-bottom: .9rem;
+}
+
+.product-description{
+    grid-row: 2;
+    box-shadow: 2px 2px 4px 4px black;
+}
+
+.horde .alliance, img{
+    width: 60px;
+}
+
+
+.faction-choice{
+    display: flex;
+    justify-content: space-evenly;
+}
+.alliance, .horde{
+    display: flex;
+}
+.product-choices button{
+    width: 70%;
+    margin-top: 2rem;
+    background: rgba(204, 184, 0, 0.9);
+    border: 2px solid #F5CB5C;
+    color: #E8EDDF;
+    cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 1.3em;
+    font-weight: bold; 
+}
+
+// cart
+.shopping-cart{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    height: calc(100vh -9.5rem);
+    width: 35rem;
+    background: whitesmoke;
+    padding: 0 1.5rem;
+    visibility: hidden;
+}
+.shopping-cart .cart-item {
+    position: relative;
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+.shopping-cart h3{
+    text-align: center;
+    color: black;
+    font-size: 1.8em;
+}
+
+.shopping-cart .cart-item .fa-times{
+    position: absolute;
+    top: 1rem; right: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: black;
+}
+
+.shopping-cart .cart-item img{
+    height: 7rem;
+}
+.shopping-cart .cart-item .cart-content h4{
+    font-size: 1.4em;
+    color: black;
+    padding-bottom: .5rem;
+}
+.shopping-cart .cart-item .cart-content .price{
+    font-size: 1.2em;
+    color: grey;
+    padding-bottom: .5rem;
+}
+
+.show-cart{
+    visibility: visible;
+}
+
+
+// Review section
+
+.reviews-section{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem;
+}
+
+.reviews-section h2{
+    grid-row: 1;
+    grid-column: 1/4;
+    justify-self: center;
+    margin-bottom: 5rem;
+    font-size: 2em;
+    font-family: $fontPrimary;
+    font-weight: bold;
+}
+
+.review-container{
+    grid-row: 2;
+    margin-top: -3rem;
+}
+.review{
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+    padding: 2rem 1rem;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+}
+.review img:last-of-type{
+    width: 40%;
+    max-height: 150px;
+}
+
+.review img{
+    margin: 1rem 0;
+}
+.review p{
+    color: rgba(255, 255, 255, 0.708);
+    padding: 1rem 0;
 }

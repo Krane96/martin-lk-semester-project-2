@@ -1,3 +1,5 @@
+
+
 import { strapiURL } from "./settings/strapi.js";
 
 const productsURL = strapiURL + "products";
@@ -33,6 +35,10 @@ export function createHTML(product){
         <span>${product.price} £</span>
         <button>Learn more</button>
         </a>
-    </div>`;
+    </div>`;  
     });
+
+    
+
+
 }
