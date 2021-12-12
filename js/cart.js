@@ -15,7 +15,7 @@ cartItem.forEach(addedCartItem => {
     `
     <div class="cart-item">
         <span class="fas fa-times"></span>
-        <img src="" alt="product image"></img>
+        <img src="${addedCartItem.image}" alt="product image"></img>
         <div class="cart-content">
             <h4>${addedCartItem.title}</h4>
             <div class="price">${addedCartItem.price}</div>

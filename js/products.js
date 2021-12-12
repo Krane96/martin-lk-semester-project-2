@@ -1,6 +1,5 @@
-
-
 import { strapiURL } from "./settings/strapi.js";
+import { searchProduct } from "./components/search_filter.js";
 
 const productsURL = strapiURL + "products";
 
@@ -15,7 +14,8 @@ async function getStrapi() {
         
 
         
-        createHTML(strapiProducts);   
+        createHTML(strapiProducts);
+        searchProduct(strapiProducts);   
     } catch (error) {
         console.log(error);
     }
