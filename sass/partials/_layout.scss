@@ -396,29 +396,34 @@ form label{
     margin: 0 auto;
     height: 1000px;
 }
+.product-detail-container h1{
+    padding-left: 1rem;
+    margin-top: 5rem;
+}
 .product-grid{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
-    grid-gap: 2rem;
 }
 .product-image{
     grid-row: 1;
     grid-column: 1/3;
-    box-shadow: 2px 2px 4px 4px black;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: rgba(20, 19, 19, 0.561);
 }
 .product-image img{
     width: 100%;
-    height: 400px;
+    height: 420px;
 }
 .product-choices{
     grid-row: 1;
     grid-column: 3/3;
-    box-shadow: 2px 2px 4px 4px black;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    background-color: rgba(20, 19, 19, 0.561);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 .product-choices h4{
     text-align: center;
@@ -428,7 +433,16 @@ form label{
 
 .product-description{
     grid-row: 2;
-    box-shadow: 2px 2px 4px 4px black;
+    grid-column: 1/3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    background-color: rgba(20, 19, 19, 0.561);
+    padding: 1.5rem;
+}
+.product-description h4{
+    margin-bottom: 1.2rem;
+}
+.product-description p{
+    line-height: 2;
 }
 
 .horde .alliance, img{
