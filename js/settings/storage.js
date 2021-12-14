@@ -22,7 +22,10 @@ export function getUsername() {
     return null;
 };
 
-
+export function clearLoginStorage() {
+    localStorage.removeItem("token");
+    localStorage.removeItem("user");
+}
 
 // making the functions to retrieve everything
 

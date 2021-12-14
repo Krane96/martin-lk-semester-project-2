@@ -583,19 +583,15 @@ form label {
   font-weight: bold;
 }
 
-.shopping-cart {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  right: 50%;
-  height: calc(100vh -9.5rem);
+#shopping-cart {
   width: 35rem;
-  background: whitesmoke;
-  padding: 0 1.5rem;
-  visibility: hidden;
+  background: rgba(245, 245, 245, 0.1);
+  padding: 1rem 2rem;
+  margin: 5rem auto;
+  border-radius: 2px;
 }
 
-.shopping-cart .cart-item {
+#shopping-cart .cart-item {
   position: relative;
   margin: 2rem 0;
   display: -webkit-box;
@@ -605,15 +601,18 @@ form label {
       -ms-flex-align: center;
           align-items: center;
   gap: 1.5rem;
+  padding: 1rem;
 }
 
-.shopping-cart h3 {
+#shopping-cart h3 {
   text-align: center;
-  color: black;
+  color: #F5CB5C;
   font-size: 1.8em;
+  padding: .5rem;
+  font-family: "Montserrat", sans-serif;
 }
 
-.shopping-cart .cart-item .fa-times {
+#shopping-cart .cart-item .fa-times {
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -622,24 +621,22 @@ form label {
   color: black;
 }
 
-.shopping-cart .cart-item img {
+#shopping-cart .cart-item img {
   height: 7rem;
+  width: 120px;
+  background-color: black;
 }
 
-.shopping-cart .cart-item .cart-content h4 {
+#shopping-cart .cart-item .cart-content h4 {
   font-size: 1.4em;
-  color: black;
+  color: #E8EDDF;
   padding-bottom: .5rem;
 }
 
-.shopping-cart .cart-item .cart-content .price {
+#shopping-cart .cart-item .cart-content .price {
   font-size: 1.2em;
   color: grey;
   padding-bottom: .5rem;
-}
-
-.show-cart {
-  visibility: visible;
 }
 
 .reviews-section {

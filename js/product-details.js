@@ -1,6 +1,4 @@
 import { getExistingCartItems, saveCart } from "./components/get_cart_items.js";
-import { shoppingCartToggle } from "./settings/const_to_export.js";
-import { showAndHideCart } from "./components/get_cart_items.js";
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 const url = `http://localhost:1337/products/${id}`;
@@ -17,7 +15,6 @@ fetch(url)
 .then(product => {
     console.log('Success:', product);
     createProductDetails(product);
-    showAndHideCart();
 })
 .catch((error) => {
     console.error('Error', error);

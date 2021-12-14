@@ -13,9 +13,9 @@ export function saveCart(addedToCart) {
 }
 
 
-export function showAndHideCart(){
-    let shoppingCartToggle = document.querySelector('.shopping-cart');
+export function cartRedirect(){
+    
     document.querySelector('.fa-shopping-cart').onclick = () => {
-        shoppingCartToggle.classList.toggle("show-cart");
+        window.location.href = "cart.html";
         }
     }
