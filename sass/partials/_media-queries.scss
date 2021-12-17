@@ -138,6 +138,9 @@
     .footer-menu div{
         margin: 0 1.5rem;
     }
+    .hero-header-container .image-fade:before{
+        height: 400px;
+    }
     
 
 }
@@ -176,6 +179,9 @@
     .copyright-section p{
         margin: auto;
     }
+    .footer-menu h4{
+        padding-bottom: .5rem;
+    }
     
     
 }
@@ -191,5 +197,6 @@
         text-align: center;
         margin-top: 1rem;
     }
+    
     
 }

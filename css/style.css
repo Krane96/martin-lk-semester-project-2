@@ -972,6 +972,7 @@ h2 {
 footer {
   position: relative;
   margin-top: 10rem;
+  padding: 1rem 0;
 }
 
 .footer-row-1 {
@@ -1173,6 +1174,9 @@ span {
   .footer-menu div {
     margin: 0 1.5rem;
   }
+  .hero-header-container .image-fade:before {
+    height: 400px;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1213,6 +1217,9 @@ span {
   }
   .copyright-section p {
     margin: auto;
+  }
+  .footer-menu h4 {
+    padding-bottom: .5rem;
   }
 }
 
