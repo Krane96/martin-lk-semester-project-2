@@ -541,6 +541,7 @@ form label{
 .review-container{
     grid-row: 2;
     margin-top: -3rem;
+    padding: 0 1rem;
 }
 .review{
     text-align: center;
@@ -551,11 +552,11 @@ form label{
 }
 .review img:last-of-type{
     width: 40%;
-    max-height: 150px;
 }
 
 .review img{
     margin: 1rem 0;
+    height: 100px;
 }
 .review p{
     color: rgba(255, 255, 255, 0.708);

@@ -665,6 +665,7 @@ form label {
   -ms-grid-row: 2;
   grid-row: 2;
   margin-top: -3rem;
+  padding: 0 1rem;
 }
 
 .review {
@@ -678,11 +679,11 @@ form label {
 
 .review img:last-of-type {
   width: 40%;
-  max-height: 150px;
 }
 
 .review img {
   margin: 1rem 0;
+  height: 100px;
 }
 
 .review p {
@@ -990,6 +991,11 @@ footer {
   -ms-flex-line-pack: start;
       align-content: start;
   height: 300px;
+  padding: 0 1.5rem;
+}
+
+.footer-menu div {
+  padding: 0 1rem;
 }
 
 .footer-menu h4 {
@@ -1083,6 +1089,9 @@ span {
   html {
     font-size: 87%;
   }
+  .hero-header-container .image-fade:before {
+    height: 800px;
+  }
 }
 
 @media (max-width: 1050px) {
@@ -1091,6 +1100,9 @@ span {
   }
   .hero-png img {
     margin-left: 0;
+  }
+  .hero-header-container .image-fade:before {
+    height: 600px;
   }
 }
 
@@ -1152,6 +1164,15 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
   }
+  .footer-menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .footer-menu div {
+    margin: 0 1.5rem;
+  }
 }
 
 @media (max-width: 720px) {
@@ -1187,6 +1208,12 @@ span {
   .hero-content {
     margin-top: 3rem;
   }
+  .footer-menu div {
+    margin: 0 1rem;
+  }
+  .copyright-section p {
+    margin: auto;
+  }
 }
 
 @media (max-width: 470px) {
@@ -1194,6 +1221,12 @@ span {
     -ms-grid-column: 1;
     -ms-grid-column-span: 8;
     grid-column: 1/9;
+  }
+  .footer-menu div, .footer-menu ul {
+    margin: 0 .5rem;
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */
