@@ -178,7 +178,7 @@ button {
 .featured-products-header {
   max-width: 1100px;
   margin: 12rem auto 3rem auto;
-  padding: .4rem;
+  padding: .4rem 2rem;
   margin-top: 20rem;
   position: relative;
 }
@@ -1144,6 +1144,9 @@ span {
   }
   .hero-text button {
     margin-top: 1rem;
+  }
+  .image-fade img {
+    height: 500px;
   }
 }
 
