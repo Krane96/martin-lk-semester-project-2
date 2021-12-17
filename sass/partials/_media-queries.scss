@@ -1,3 +1,61 @@
+@media (max-width: 1380px) {
+    html{
+        font-size: 95%;
+    }
+    
+    .hero-png img{
+        width: 100%;
+    }
+    .hero-png{
+        margin: auto;
+    }
+    .hero-content{
+        margin-top: 11rem;
+    }
+}
+
+
+
+
+
+
+@media (max-width: 1300px) {
+    html{
+        font-size: 85%;
+    }
+    .hero-content{
+        margin-top: 9rem;
+    }
+    .hero-text button{
+        width: 200px;
+        padding: .6rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .hero-content{
+        margin-top: 5rem;
+    }
+}
+
+
+
+
+
+
 @media (max-width: 991px) {
     html{
         font-size: 90%;

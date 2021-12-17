@@ -1,6 +1,7 @@
 import {strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
 import { saveToken, saveUser } from "./settings/storage.js";
+import { getToken } from "./settings/storage.js";
 
 
 const form = document.querySelector("form");
@@ -59,4 +60,8 @@ console.log(json);
     }  catch(error) {
         console.log(error);
     }
+}
+
+if (!getToken) {
+    location.href = "index.html";
 }

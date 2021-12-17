@@ -732,6 +732,119 @@ form label {
   height: auto;
 }
 
+.admin-panel-container {
+  margin: 3rem auto;
+  width: 800px;
+  height: 800px;
+  background-color: rgba(20, 19, 19, 0.561);
+  border-radius: 2px;
+}
+
+.admin-user {
+  padding: 1rem 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.admin-user img {
+  border-radius: 30%;
+  margin-right: 1.5rem;
+  border: 4px solid #001524;
+  padding: 10px;
+  width: 100px;
+}
+
+.admin-panel-row-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: -2.5rem;
+}
+
+.admin-form {
+  background-color: #001524;
+  width: 300px;
+  height: 500px;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin: auto;
+  text-align: center;
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.admin-form span {
+  padding: 0 .5rem;
+  cursor: pointer;
+  width: 100px;
+  display: inline-block;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+.form-buttons {
+  display: inline-block;
+}
+
+.admin-form form {
+  max-width: 300px;
+  position: absolute;
+  padding: 0 1.5rem;
+  top: 130px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+#update-form input, #make-form input, textarea {
+  width: 100%;
+  height: 30px;
+  margin: .5rem 0;
+  padding: 0 0.5rem;
+  border: 1px solid #ccc;
+}
+
+.form-btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin: 0.8rem 0;
+}
+
+#make-form {
+  left: -300px;
+}
+
+#update-form {
+  left: 0;
+}
+
+#indicator {
+  width: 100px;
+  border: none;
+  background-color: #F5CB5C;
+  height: 3px;
+  margin-top: 8px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+}
+
+.logout-wrap {
+  text-align: right;
+  margin: 1rem 1rem 0 0;
+}
+
 h4 {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4em;
@@ -851,6 +964,10 @@ h2 {
   display: none;
 }
 
+.fa, .fas {
+  color: #E8EDDF;
+}
+
 footer {
   position: relative;
   margin-top: 10rem;
@@ -929,6 +1046,40 @@ span {
   max-width: 200px;
   opacity: 0.6;
   padding: 0 1rem;
+}
+
+@media (max-width: 1380px) {
+  html {
+    font-size: 95%;
+  }
+  .hero-png img {
+    width: 100%;
+  }
+  .hero-png {
+    margin: auto;
+  }
+  .hero-content {
+    margin-top: 11rem;
+  }
+}
+
+@media (max-width: 1300px) {
+  html {
+    font-size: 85%;
+  }
+  .hero-content {
+    margin-top: 9rem;
+  }
+  .hero-text button {
+    width: 200px;
+    padding: .6rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-content {
+    margin-top: 5rem;
+  }
 }
 
 @media (max-width: 991px) {
