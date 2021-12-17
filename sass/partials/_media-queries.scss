@@ -7,7 +7,7 @@
         width: 100%;
     }
     .hero-png{
-        margin: auto;
+        margin-top: 0;
     }
     .hero-content{
         margin-top: 11rem;
@@ -21,7 +21,7 @@
 
 @media (max-width: 1300px) {
     html{
-        font-size: 85%;
+        font-size: 90%;
     }
     .hero-content{
         margin-top: 9rem;
@@ -49,6 +49,9 @@
     .hero-content{
         margin-top: 5rem;
     }
+    html{
+        font-size: 87%;
+    }
 }
 
 
@@ -56,12 +59,18 @@
 
 
 
-@media (max-width: 991px) {
+@media (max-width: 1050px) {
     html{
-        font-size: 90%;
+        font-size: 85%;
+    }
+    .hero-png img{
+        margin-left: 0;
     }
 }
 @media (max-width: 991px) {
+    html{
+        font-size: 80%;
+    }
     .menu-icon{
         display: inline-block;
     }
@@ -90,15 +99,64 @@
     }
 }
 
+@media (max-width: 920px) {
+    
+    .hero-buttons button:last-of-type {
+        margin-left: 0;
+    }
+    .hero-text button{
+        margin-top: 1rem;
+    }
+}
 
-@media (max-width: 600px) {
+@media (max-width: 840px) {
+    .hero-png{
+        grid-column: 6/9;
+        
+    }
+    .hero-text{
+        font-size: 85%;
+    }
+    .hero-buttons{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 720px) {
+    .hero-text{
+        grid-column: 1/6;
+    }
+}
+
+
+@media (max-width: 620px) {
     html{
-        font-size: 80%;
+        font-size: 75%;
     }
     .products-container{
         grid-template-columns: repeat(1, 1fr);
     }
-    .hero-content{
-        padding: 0;
+    .hero-png{
+        display: none;
     }
+    .hero-text{
+        grid-column: 2/8;
+        text-align: center;
+    }
+    .hero-buttons{
+        align-items: center;
+    }
+    .hero-content{
+        margin-top: 3rem;
+    }
+    
+}
+
+@media (max-width: 470px) {
+    .hero-text{
+        grid-column: 1/9;
+        
+    }
+    
 }

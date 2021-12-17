@@ -1056,7 +1056,7 @@ span {
     width: 100%;
   }
   .hero-png {
-    margin: auto;
+    margin-top: 0;
   }
   .hero-content {
     margin-top: 11rem;
@@ -1065,7 +1065,7 @@ span {
 
 @media (max-width: 1300px) {
   html {
-    font-size: 85%;
+    font-size: 90%;
   }
   .hero-content {
     margin-top: 9rem;
@@ -1080,15 +1080,24 @@ span {
   .hero-content {
     margin-top: 5rem;
   }
+  html {
+    font-size: 87%;
+  }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1050px) {
   html {
-    font-size: 90%;
+    font-size: 85%;
+  }
+  .hero-png img {
+    margin-left: 0;
   }
 }
 
 @media (max-width: 991px) {
+  html {
+    font-size: 80%;
+  }
   .menu-icon {
     display: inline-block;
   }
@@ -1116,16 +1125,75 @@ span {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 920px) {
+  .hero-buttons button:last-of-type {
+    margin-left: 0;
+  }
+  .hero-text button {
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 840px) {
+  .hero-png {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 3;
+    grid-column: 6/9;
+  }
+  .hero-text {
+    font-size: 85%;
+  }
+  .hero-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-column: 1/6;
+  }
+}
+
+@media (max-width: 620px) {
   html {
-    font-size: 80%;
+    font-size: 75%;
   }
   .products-container {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
+  .hero-png {
+    display: none;
+  }
+  .hero-text {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 6;
+    grid-column: 2/8;
+    text-align: center;
+  }
+  .hero-buttons {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   .hero-content {
-    padding: 0;
+    margin-top: 3rem;
+  }
+}
+
+@media (max-width: 470px) {
+  .hero-text {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 8;
+    grid-column: 1/9;
   }
 }
 /*# sourceMappingURL=style.css.map */
