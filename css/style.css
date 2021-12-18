@@ -397,8 +397,8 @@ button {
 .login-container {
   position: relative;
   padding: 4rem 2rem;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(53, 34, 114, 0.2)));
-  background: linear-gradient(rgba(48, 39, 59, 0.29), rgba(53, 34, 114, 0.2));
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(rgba(48, 39, 59, 0.29), rgba(0, 0, 0, 0.4));
   width: 450px;
   border-radius: 5px;
   -webkit-box-shadow: 7px 7px 60px black;
@@ -976,7 +976,7 @@ footer {
 }
 
 .footer-row-1 {
-  padding: 2rem 0;
+  padding-bottom: 2rem;
   border-top: 1px solid #ffffff80;
 }
 
@@ -989,10 +989,11 @@ footer {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-line-pack: start;
-      align-content: start;
   height: 300px;
   padding: 0 1.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-menu div {
@@ -1116,15 +1117,20 @@ span {
   }
   .header .navigation {
     position: absolute;
-    top: 10%;
+    top: 0;
     background: black;
-    height: calc(100vh - 9.5rem);
     display: none;
   }
   .header .navigation.active {
-    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
-    height: 100%;
+    height: 200px;
   }
   .header .navigation a {
     display: block;
@@ -1135,6 +1141,9 @@ span {
   .products-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+  }
+  .fa-bars, .fa-shopping-cart, .fa-user {
+    position: relative;
   }
 }
 
@@ -1224,6 +1233,9 @@ span {
   .footer-menu h4 {
     padding-bottom: .5rem;
   }
+  .login-container {
+    margin: 0 1.5rem;
+  }
 }
 
 @media (max-width: 470px) {
@@ -1237,6 +1249,9 @@ span {
     width: 100%;
     text-align: center;
     margin-top: 1rem;
+  }
+  .copyright-section p {
+    margin-bottom: 1rem;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -82,16 +82,16 @@
     }
     .header .navigation{
         position: absolute;
-        top: 10%;
+        top: 0;
         background: black;
-        height: calc(100vh - 9.5rem);
         display: none;
     }
 
     .header .navigation.active{
-       display: block;
+       display: flex;
+       flex-direction: column;
        width: 100%;
-       height: 100%;
+       height: 200px;
     }
 
     .header .navigation a{
@@ -103,6 +103,10 @@
     .products-container{
         grid-template-columns: repeat(2, 1fr);
     }
+    .fa-bars, .fa-shopping-cart, .fa-user{
+        position: relative;
+    }
+    
 }
 
 @media (max-width: 920px) {
@@ -185,7 +189,9 @@
     .footer-menu h4{
         padding-bottom: .5rem;
     }
-    
+    .login-container{
+        margin: 0 1.5rem;
+    }
     
 }
 
@@ -200,6 +206,8 @@
         text-align: center;
         margin-top: 1rem;
     }
-    
+    .copyright-section p{
+        margin-bottom: 1rem;
+    }
     
 }

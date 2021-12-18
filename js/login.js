@@ -1,8 +1,11 @@
 import {strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
 import { saveToken, saveUser } from "./settings/storage.js";
-import { getToken } from "./settings/storage.js";
 
+
+if (!saveUser) {
+    window.location.href = "index.html";
+}
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");
@@ -48,7 +51,7 @@ console.log(json);
             saveToken(json.jwt);
             saveUser(json.user)
 
-            //redirect to login if succesful
+            //redirect to account if succesful
 
             location.href = "/account.html";
         }
@@ -62,6 +65,3 @@ console.log(json);
     }
 }
 
-if (!getToken) {
-    location.href = "index.html";
-}
