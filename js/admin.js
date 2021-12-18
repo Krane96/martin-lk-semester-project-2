@@ -6,7 +6,7 @@ import displayMessage from "./components/login_message.js";
 const token = getToken();
 
 
-if (!token) {
+if(token.length === 0) {
     window.location.href = "login.html";
 }
 
@@ -36,8 +36,10 @@ const loggedUser = document.querySelector('.admin-panel-row-1');
 const username = getUsername();
 console.log(username);
 
-let authLink = `<h1>You are not logged in</h1>
+let authLink = `<div class="test">
+                <h1>You are not logged in</h1>
                 <button><a href="login.html">Login</button>
+                </div>
 `;
 
 if(username){

@@ -1,11 +1,13 @@
 import {strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
 import { saveToken, saveUser } from "./settings/storage.js";
+import { getToken } from "./settings/storage.js";
+const token = getToken();
 
-
-if (!saveUser) {
-    window.location.href = "index.html";
+if(token === "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NzkyNTEzLCJleHAiOjE2NDIzODQ1MTN9.RpimlE16CaNwWe9wwrO8DCN9Z6-PPD5ePvS4ydddLGo") {
+    window.location.href = "account.html";
 }
+
 
 const form = document.querySelector("form");
 const username = document.querySelector("#username");

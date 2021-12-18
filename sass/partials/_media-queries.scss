@@ -148,6 +148,14 @@
     .hero-header-container .image-fade:before{
         height: 400px;
     }
+
+    .product-card{
+        margin: 0 1rem;
+    }
+
+    .products-container{
+        grid-gap: 3rem;
+    }
     
 
 }
@@ -156,6 +164,9 @@
     .hero-text{
         grid-column: 1/6;
     }
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }
 
 
@@ -163,9 +174,7 @@
     html{
         font-size: 75%;
     }
-    .products-container{
-        grid-template-columns: repeat(1, 1fr);
-    }
+    
     .hero-png{
         display: none;
     }
