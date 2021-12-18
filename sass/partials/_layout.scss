@@ -471,7 +471,7 @@ form label{
 
 // cart
 #shopping-cart{
-    width: 35rem;
+    max-width: 35rem;
     background: rgba(245, 245, 245, 0.1);
     padding: 1rem 2rem;
     margin: 5rem auto;
@@ -638,6 +638,7 @@ form label{
     text-align: center;
     padding: 1rem 0;
     overflow: hidden;
+    margin-top: 3rem;
 }
 
 .admin-form span{
@@ -694,6 +695,11 @@ form label{
 .logout-wrap{
     text-align: right;
     margin: 1rem 1rem 0 0;
+}
+.logout{
+    background: none;
+    color: $textColor;
+    cursor: pointer;
 }
 .message{
     margin-bottom: .5rem;

@@ -584,7 +584,7 @@ form label {
 }
 
 #shopping-cart {
-  width: 35rem;
+  max-width: 35rem;
   background: rgba(245, 245, 245, 0.1);
   padding: 1rem 2rem;
   margin: 5rem auto;
@@ -779,6 +779,7 @@ form label {
   text-align: center;
   padding: 1rem 0;
   overflow: hidden;
+  margin-top: 3rem;
 }
 
 .admin-form span {
@@ -843,6 +844,12 @@ form label {
 .logout-wrap {
   text-align: right;
   margin: 1rem 1rem 0 0;
+}
+
+.logout {
+  background: none;
+  color: #E8EDDF;
+  cursor: pointer;
 }
 
 .message {
@@ -1261,6 +1268,12 @@ span {
   }
   .copyright-section p {
     margin-bottom: 1rem;
+  }
+  #shopping-cart {
+    margin: 5rem 1.5rem;
+  }
+  #shopping-cart .cart-item .fa-times {
+    right: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
