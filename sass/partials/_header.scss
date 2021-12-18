@@ -10,7 +10,9 @@
     justify-content: space-between;
     margin: 0 auto;
     max-width: 1200px;
-   
+}
+.header-wrapper{
+    border-bottom: 1px solid $thinGrayColor;
 }
 
 .logo span{

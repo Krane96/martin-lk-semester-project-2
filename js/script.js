@@ -1,31 +1,29 @@
 import { strapiURL } from "./settings/strapi.js";
-import { cartRedirect } from "./components/get_cart_items.js";
 
 const heroURL = strapiURL + "banner";
 const productsURL = strapiURL + "products";
 
 
+
+
+
 async function getStrapi() {
     
     try {
-        // Products Strapi
-
-        const response = await fetch(productsURL);
-        const strapiProducts = await response.json();
         
         //Hero Strapi
 
         const responseTwo = await fetch(heroURL);
         const strapiHero = await responseTwo.json();
 
-
         console.log(strapiHero);
-        console.log(strapiProducts);
         
+        //Filter for featured products
+    
 
          
         createHero(strapiHero);
-        cartRedirect();   
+        
     } catch (error) {
         console.log(error);
     }
@@ -35,6 +33,49 @@ async function getStrapi() {
 };
 
 getStrapi();
+
+
+
+async function getProducts () {
+
+    const response = await fetch(productsURL);
+    const strapiProducts = await response.json();
+    console.log(strapiProducts);
+
+
+    const filterIfFeatured = (product) => {
+        if (product.featured === true) {
+            return true;
+        }
+    };
+
+    const featured = strapiProducts.filter(filterIfFeatured)
+    console.log(featured)
+
+    for (let i = 0; i < featured.length; i++) {
+
+
+        if (i === 3) {
+          break;
+        }
+
+    const products = document.querySelector('.products-container');
+    products.innerHTML += ` 
+    
+    <div class="product-card">
+        <a class="grid-card" href="products.html">
+        <h3>${featured[i].title}</h3>
+        <p>${featured[i].description}</p>
+        <span>${featured[i].price} £</span>
+        <button>Learn more</button>
+        </a>
+    </div>
+    `
+}
+};
+
+getProducts();
+
 
 
 
@@ -50,28 +91,6 @@ function createHero(hero){
         `;
     
 }
-
-    
-
-/*
-
-document.querySelector('.user-icon').onclick = () => {
-    const loginDisplay = document.querySelector('.login-container');
-    loginDisplay.classList.toggle('login-visible')
-    
-}
-
-*/
-
-
-
-
-
-
-
-
-
-
 
 
 

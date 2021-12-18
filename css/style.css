@@ -177,10 +177,10 @@ button {
 
 .featured-products-header {
   max-width: 1100px;
-  margin: 12rem auto 3rem auto;
-  padding: .4rem 2rem;
+  margin: 12rem auto 4rem auto;
   margin-top: 20rem;
   position: relative;
+  text-align: center;
 }
 
 .products-container {
@@ -477,6 +477,7 @@ form label {
 .product-detail-container h1 {
   padding-left: 1rem;
   margin-top: 5rem;
+  margin-left: 2rem;
 }
 
 .product-grid {
@@ -485,6 +486,7 @@ form label {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   padding: 1rem;
+  margin: 0 2rem;
 }
 
 .product-image {
@@ -602,6 +604,7 @@ form label {
           align-items: center;
   gap: 1.5rem;
   padding: 1rem;
+  border-bottom: 2px solid #ffffff80;
 }
 
 #shopping-cart h3 {
@@ -618,11 +621,17 @@ form label {
   right: 1rem;
   font-size: 2rem;
   cursor: pointer;
-  color: black;
+  color: #E8EDDF;
+}
+
+#shopping-cart .cart-item .fa-times:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: #F5CB5C;
 }
 
 #shopping-cart .cart-item img {
-  height: 7rem;
+  height: 6rem;
   width: 120px;
   background-color: black;
 }
@@ -735,9 +744,8 @@ form label {
 .admin-panel-container {
   margin: 3rem auto;
   max-width: 800px;
-  height: 800px;
-  background-color: rgba(20, 19, 19, 0.561);
   border-radius: 2px;
+  padding-bottom: 3rem;
 }
 
 .admin-user {
@@ -769,9 +777,9 @@ form label {
 }
 
 .admin-form {
-  background-color: #001524;
+  background-color: rgba(245, 245, 245, 0.1);
   width: 300px;
-  height: 500px;
+  height: 450px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   position: relative;
@@ -780,6 +788,16 @@ form label {
   padding: 1rem 0;
   overflow: hidden;
   margin-top: 3rem;
+  border-radius: 3px;
+}
+
+.cart-admin {
+  background-color: #001524;
+}
+
+.admin-form button {
+  background: #F5CB5C;
+  letter-spacing: 1px;
 }
 
 .admin-form span {
@@ -789,6 +807,7 @@ form label {
   display: inline-block;
   font-family: "Open Sans", sans-serif;
   font-weight: bold;
+  font-size: 1.3em;
 }
 
 .form-buttons {
@@ -901,6 +920,10 @@ h2 {
           justify-content: space-between;
   margin: 0 auto;
   max-width: 1200px;
+}
+
+.header-wrapper {
+  border-bottom: 1px solid #ffffff80;
 }
 
 .logo span {

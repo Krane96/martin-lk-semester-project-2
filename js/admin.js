@@ -3,8 +3,21 @@ import { clearLoginStorage } from "./settings/storage.js";
 import { getUsername } from "./settings/storage.js";
 import { strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
+import { getExistingCartItems } from "./components/get_cart_items.js";
+
+const queryString = document.location.search;
+const params = new URLSearchParams(queryString);
+const id = params.get("id");
+
+const cartItem = getExistingCartItems();
+const cartHtml = document.querySelector('#shopping-cart')
+const imageURL = "http://localhost:1337";
 const token = getToken();
 
+
+if (cartItem.length === 0) {
+    cartHtml.innerHTML = "<h3>Cart is Empty</h3>"; 
+}
 /*
 if(token.length === 0) {
     window.location.href = "login.html";
@@ -51,7 +64,7 @@ if(username){
 loggedUser.innerHTML = `${authLink}`;
 
 
-//form toggle
+//makeForm toggle
 
 let updateForm = document.querySelector('#update-form');
 let makeForm = document.querySelector('#make-form');
@@ -79,13 +92,13 @@ make.onclick = () => {
 
 // Add product
 
-const form = document.querySelector("form");
+const formMake = document.querySelector("#update-form");
 const name = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const message = document.querySelector(".message-container");
 
-form.addEventListener("submit", formSubmit);
+formMake.addEventListener("submit", formSubmit);
 
 function formSubmit(event) {
     event.preventDefault();
@@ -128,10 +141,88 @@ async function addProduct(title, price, description) {
 
             if(json.created_at){
                 alert("product created");
-                form.reset();
+                makeForm.reset();
             }
         }
         catch(error){
             console.log(error);
         }
 };
+
+
+// update product
+
+const productUrl = strapiURL + "products/" + id;
+const formUpdate = document.querySelector('#make-form');
+const updateTitle = document.querySelector('.update-name');
+const updatePrice = document.querySelector('.update-price');
+const updateDescription = document.querySelector('.update-description');
+const updateId = document.querySelector('.update-id');
+
+(async function () {
+    try {
+        const response = await fetch(productUrl);
+        const details = await response.json();
+
+        updateTitle.value = details.title;
+        updatePrice.value = details.price;
+        updateDescription.value = details.description;
+        updateId.value = details.id;
+
+    console.log(details);
+        
+    } catch (error) {
+        console.log(error);
+    }
+})
+
+
+
+
+// cart 
+const removeButtons = document.querySelectorAll('.cart-item span');
+removeButtons.forEach((removeButton) => {
+    removeButton.addEventListener('click', buttonClick);
+});
+
+function buttonClick() {
+        
+    const description = this.dataset.description;
+    const title = this.dataset.title;
+    const price = this.dataset.price
+    const image = this.dataset.image_url
+
+    const currentCartItems = getExistingCartItems();
+
+    const cartItemExist = currentCartItems.find(function (added) {
+        return added.description === description;
+    });
+  
+    if (cartItemExist === undefined) {
+        
+    } else {
+        const newCart = currentCartItems.filter((added) => added.title !== title);
+        saveCart(newCart);
+        alert("Removed from your cart")
+
+    }
+    
+} 
+
+cartItem.forEach(addedCartItem => {
+    cartHtml.innerHTML += 
+    `
+    <div class="cart-item">
+    <a href="account.html?${addedCartItem.id}">
+        <span class="fas fa-times" data-image="${imageURL + addedCartItem.image_url}"data-description="${addedCartItem.description}"data-title="${addedCartItem.title}" data-price="${addedCartItem.price}"></span>
+        <img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img>
+        <div class="cart-content">
+            <h4>${addedCartItem.title}</h4>
+            <div class="price">${addedCartItem.price} £</div>
+            </a>
+        </div> 
+    </div>
+    `;
+    
+});
+

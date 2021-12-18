@@ -1,6 +1,5 @@
 import { strapiURL } from "./settings/strapi.js";
 import { searchProduct } from "./components/search_filter.js";
-import { cartRedirect } from "./components/get_cart_items.js";
 
 const productsURL = strapiURL + "products";
 
@@ -36,6 +35,7 @@ export function createHTML(product){
         <span>${product.price} £</span>
         <button>Learn more</button>
         </a>
+        <a href="account.html?${product.id}">Edit</a>
     </div>`;  
     });
 

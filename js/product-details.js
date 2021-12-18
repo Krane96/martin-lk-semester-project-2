@@ -9,7 +9,6 @@ const imageURL = "http://localhost:1337";
 
 
 
-
 fetch(url)
 .then(response => response.json())
 .then(product => {
@@ -45,7 +44,7 @@ function createProductDetails (product) {
                             <img src="images/alliance_logo.png"></img>
                         </div>
                 </div>
-                <button data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart</button>
+                <button data-image_url="${product.image_url}"data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart</button>
             </div>
      </div>
      
@@ -66,12 +65,12 @@ const addButtons = document.querySelectorAll('.product-choices button');
         button.addEventListener('click', buttonClick);
     });
 
-    function buttonClick() {
-        
+function buttonClick() {
         
         const description = this.dataset.description;
         const title = this.dataset.title;
         const price = this.dataset.price
+        const image_url = this.dataset.image_url;
     
         const currentCartItems = getExistingCartItems();
     
@@ -80,13 +79,15 @@ const addButtons = document.querySelectorAll('.product-choices button');
         });
     
         if (cartItemExist === undefined) {
-            const cartItem = { title: title, description: description,  price: price};
+            const cartItem = { title: title, description: description,  price: price, image: image_url};
             currentCartItems.push(cartItem);
             saveCart(currentCartItems);
+            alert("Added to your cart")
             
         } else {
             const newCart = currentCartItems.filter((added) => added.title !== title);
             saveCart(newCart);
+            alert("Removed from your cart")
         }
 
     }  
