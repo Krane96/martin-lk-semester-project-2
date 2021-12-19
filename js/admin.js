@@ -213,13 +213,13 @@ cartItem.forEach(addedCartItem => {
     cartHtml.innerHTML += 
     `
     <div class="cart-item">
-    <a href="account.html?${addedCartItem.id}">
         <span class="fas fa-times" data-image="${imageURL + addedCartItem.image_url}"data-description="${addedCartItem.description}"data-title="${addedCartItem.title}" data-price="${addedCartItem.price}"></span>
         <img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img>
         <div class="cart-content">
             <h4>${addedCartItem.title}</h4>
             <div class="price">${addedCartItem.price} £</div>
-            </a>
+            <a href="account.html?${addedCartItem.id}">Edit</a>
+            
         </div> 
     </div>
     `;

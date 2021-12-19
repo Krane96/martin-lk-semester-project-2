@@ -154,7 +154,7 @@ button {
 .featured-products-header{
     max-width: 1100px;
     margin: 12rem auto 4rem auto;
-    margin-top: 20rem;
+    margin-top: 12rem;
     position: relative;
     text-align: center;
 }
@@ -470,6 +470,20 @@ form label{
     font-size: 1.3em;
     font-weight: bold; 
 }
+select{
+    padding: .5rem;
+    display: block;
+    margin-top: 2rem;
+    width: 70%;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+}
+.product-choices input{
+    padding: .6rem;
+    width: 70%;
+    margin-top: 2rem;
+    border-radius: 2px;
+}
 
 // cart
 #shopping-cart{
@@ -491,7 +505,6 @@ form label{
 }
 #shopping-cart h3{
     text-align: center;
-    color: $hoverLinkColor;
     font-size: 1.8em;
     padding: .5rem;
     font-family:  $fontPrimary;
@@ -525,6 +538,12 @@ form label{
     padding-bottom: .5rem;
 }
 
+.cart-content a{
+    color: rgb(18, 77, 150);
+}
+.indicator{
+    margin: auto;
+}
 
 
 // Review section
@@ -632,11 +651,13 @@ form label{
     display: flex;
     justify-content: space-between;
     margin-top: -2.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    border-bottom: 1px solid $thinGrayColor;
 }
 
 .admin-form{
     background-color: rgba(245, 245, 245, 0.1);
-    width: 300px;
     height: 450px;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
     position: relative;
@@ -646,6 +667,7 @@ form label{
     overflow: hidden;
     margin-top: 3rem;
     border-radius: 3px;
+    max-width: 300px;
 }
 .cart-admin{
     background-color: $backgroundColor;

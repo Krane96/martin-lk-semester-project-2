@@ -36,14 +36,33 @@ function createProductDetails (product) {
                 <h4>Choose your faction</h4>
                 <div class="faction-choice">
                         <div class="alliance">
-                            <input type="radio" id="alliance" name="faction" value="alliance">
+                            
                             <img src="images/horde_logo.png"></img>
                         </div>
                             <div class="horde">
-                            <input type="radio" id="horde" name="faction" value="horde">
+                            
                             <img src="images/alliance_logo.png"></img>
-                        </div>
+                        </div>      
                 </div>
+                <select>
+                        <option>Select Class</option>
+                        <option>Mage</option>
+                        <option>Warrior</option>
+                        <option>Paladin</option>
+                        <option>Warlock</option>
+                        <option>Hunter</option>
+                        <option>Rogue</option>
+                        </select>
+                <select>
+                        <option>Select Server</option>
+                        <option>Ragnaros</option>
+                        <option>Silvermoon</option>
+                        <option>Outland</option>
+                        <option>Firemaw</option>
+                        <option>Dreadmist</option>
+                        <option>Blade's Edge    </option>
+                        </select>
+                        <input type"text" placeholder="Character name"/>
                 <button data-image_url="${product.image_url}"data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart</button>
             </div>
      </div>

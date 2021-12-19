@@ -35,7 +35,6 @@ export function createHTML(product){
         <span>${product.price} £</span>
         <button>Learn more</button>
         </a>
-        <a href="account.html?${product.id}">Edit</a>
     </div>`;  
     });
 

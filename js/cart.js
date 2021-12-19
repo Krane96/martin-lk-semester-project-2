@@ -16,10 +16,11 @@ cartItem.forEach(addedCartItem => {
     `
     <div class="cart-item">
         <span class="fas fa-times" data-image="${imageURL + addedCartItem.image_url}"data-description="${addedCartItem.description}"data-title="${addedCartItem.title}" data-price="${addedCartItem.price}"></span>
-        <a href="account.html#update-form"><img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img></a>
+        <img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img>
         <div class="cart-content">
             <h4>${addedCartItem.title}</h4>
             <div class="price">${addedCartItem.price} £</div>
+            <a href="account.html?${addedCartItem.id}">Edit</a>
         </div> 
     </div>
     `;

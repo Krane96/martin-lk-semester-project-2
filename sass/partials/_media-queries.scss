@@ -167,6 +167,33 @@
     .products-container{
         grid-template-columns: repeat(1, 1fr);
     }
+    .product-choices{
+        grid-row: 3;
+        grid-column: 1/4;
+        margin-top: 2rem;
+        padding-bottom: 2rem;
+    }
+    .product-grid .product-image{
+        grid-column: 1/4;
+    }
+    .product-image img{
+        height: 300px;
+    }
+    .product-description{
+        grid-column: 1/4;
+    }
+    .product-grid{
+        max-width: 500px;
+        margin: auto;
+    }
+    .product-detail-container h1{
+        margin: auto;
+        padding: 0;
+        text-align: left;
+        max-width: 500px;
+        padding: 1rem;
+        margin-top: 2rem;
+    }
 }
 
 
@@ -224,5 +251,17 @@
     #shopping-cart .cart-item .fa-times{
         right: 0;
     }
-    
+    .admin-user{
+        flex-direction: column;
+    }
+    .admin-panel-row-1{
+        justify-content: center;
+    }
+
+}
+
+@media (max-width: 390px) {
+    #shopping-cart .cart-item .fa-times{
+        right: -10%;
+    }
 }
