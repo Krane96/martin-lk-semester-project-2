@@ -4,6 +4,7 @@ import { getUsername } from "./settings/storage.js";
 import { strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
 import { getExistingCartItems } from "./components/get_cart_items.js";
+import { navigationToggle } from "./components/navigation.js";
 
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
@@ -14,6 +15,7 @@ const cartHtml = document.querySelector('#shopping-cart')
 const imageURL = "http://localhost:1337";
 const token = getToken();
 
+navigationToggle();
 
 if (cartItem.length === 0) {
     cartHtml.innerHTML = "<h3>Cart is Empty</h3>"; 

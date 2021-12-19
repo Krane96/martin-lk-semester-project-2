@@ -1036,7 +1036,7 @@ h2 {
 
 .toggle-button {
   position: absolute;
-  top: 2.7rem;
+  top: 2.6rem;
   right: 1.5rem;
   display: none;
   -webkit-box-orient: vertical;
@@ -1051,10 +1051,10 @@ h2 {
 }
 
 .toggle-button .bar {
-  height: 3px;
+  height: 4px;
   width: 100%;
   background-color: #E8EDDF;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 footer {

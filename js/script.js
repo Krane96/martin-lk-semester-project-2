@@ -1,5 +1,5 @@
 import { strapiURL } from "./settings/strapi.js";
-
+import { navigationToggle } from "./components/navigation.js";
 const heroURL = strapiURL + "banner";
 const productsURL = strapiURL + "products";
 
@@ -93,26 +93,18 @@ function createHero(hero){
 
 
 /* Navigation */
+navigationToggle();
 
-const toggleNavButton = document.querySelector('.toggle-button');
-const headerNav = document.querySelector('.navigation');
-const headerIcons = document.querySelector('.navigation-icons');
-const headerStyle = document.querySelector('.header');
 
-toggleNavButton.addEventListener('click', () => {
-    headerNav.classList.toggle('active');
-    headerIcons.classList.toggle('active');
-    headerStyle.classList.toggle('active-header');
+
+const shopButton = document.querySelector('.shop-button').addEventListener('click', () => {
+   location.href = "products.html";
+});
+const loginButton = document.querySelector('.hero-buttons button').addEventListener('click', () => {
+   location.href = "login.html";
 });
 
 
 
-let loginButtonNav = document.querySelector('.hero-buttons button').onclick = () => {
-    window.location.href = "login.html";
-};
-
-let heroShopButton = document.querySelector('.shop-button').onclick = () => {
-    window.location.href = "products.html";
-};
 
 

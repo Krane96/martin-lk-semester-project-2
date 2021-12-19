@@ -1,9 +1,11 @@
 import { getExistingCartItems, saveCart } from "./components/get_cart_items.js";
+import { navigationToggle } from "./components/navigation.js";
 const cartItem = getExistingCartItems();
 const cartHtml = document.querySelector('#shopping-cart')
 
 const imageURL = "http://localhost:1337";
 
+navigationToggle();
 
 if (cartItem.length === 0) {
     cartHtml.innerHTML = "<h3>Cart is Empty</h3>"; 

@@ -1,12 +1,13 @@
 import { getExistingCartItems, saveCart } from "./components/get_cart_items.js";
+import { navigationToggle } from "./components/navigation.js";
+
 const queryString = window.location.search;
 const id = new URLSearchParams(queryString).get('id');
 const url = `http://localhost:1337/products/${id}`;
-
 const imageURL = "http://localhost:1337";
 
 
-
+navigationToggle();
 
 
 fetch(url)
