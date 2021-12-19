@@ -1036,8 +1036,8 @@ h2 {
 
 .toggle-button {
   position: absolute;
-  top: .75rem;
-  right: .75rem;
+  top: 1.5rem;
+  right: 1.5rem;
   display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1208,7 +1208,7 @@ span {
   .header .navigation-icons {
     display: none;
     position: absolute;
-    top: .75rem;
+    top: .50rem;
     right: 5rem;
   }
   .navigation {
@@ -1233,14 +1233,16 @@ span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-bottom: 2.5rem;
   }
   .header .navigation-icons.active {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    padding-right: 0;
   }
   .active-header {
-    background-color: black;
+    background-color: #001524;
   }
   .header .navigation a {
     display: block;
@@ -1350,6 +1352,9 @@ span {
     max-width: 500px;
     padding: 1rem;
     margin-top: 2rem;
+  }
+  .navigation-icons .fa, .fas {
+    font-size: 1.3em;
   }
 }
 

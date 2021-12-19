@@ -83,7 +83,7 @@
     .header .navigation-icons{
         display: none;
         position: absolute;
-        top: .75rem;
+        top: .50rem;
         right: 5rem;
     }
     .navigation{
@@ -98,12 +98,15 @@
     }
     .navigation.active {
         display: flex;
+        padding-bottom: 2.5rem;
     }
+    
     .header .navigation-icons.active{
         display: flex;
+        padding-right: 0;
     }
     .active-header{
-        background-color: black;
+        background-color: $backgroundColor;
     }
 
     
@@ -208,6 +211,9 @@
         max-width: 500px;
         padding: 1rem;
         margin-top: 2rem;
+    }
+    .navigation-icons .fa, .fas{
+        font-size: 1.3em;
     }
 }
 
