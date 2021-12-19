@@ -657,6 +657,7 @@ select {
   font-size: 1.4em;
   color: #E8EDDF;
   padding-bottom: .5rem;
+  max-width: 170px;
 }
 
 #shopping-cart .cart-item .cart-content .price {
@@ -666,7 +667,7 @@ select {
 }
 
 .cart-content a {
-  color: #124d96;
+  color: #F5CB5C;
 }
 
 .indicator {
@@ -1214,6 +1215,7 @@ span {
   .products-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
+    max-width: 800px;
   }
   .fa-bars, .fa-shopping-cart, .fa-user {
     position: relative;

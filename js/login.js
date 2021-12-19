@@ -1,8 +1,8 @@
 import {strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
-import { saveToken, saveUser } from "./settings/storage.js";
-import { getToken } from "./settings/storage.js";
-const token = getToken();
+import { saveJWC, saveUser } from "./settings/storage.js";
+import { getJWC } from "./settings/storage.js";
+const token = getJWC();
 
 /*
 if(token === "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjM5NzkyNTEzLCJleHAiOjE2NDIzODQ1MTN9.RpimlE16CaNwWe9wwrO8DCN9Z6-PPD5ePvS4ydddLGo") {
@@ -51,7 +51,7 @@ async function whenLogin(username, password) {
 console.log(json);
 
         if(json.user) {
-            saveToken(json.jwt);
+            saveJWC(json.jwt);
             saveUser(json.user)
 
             //redirect to account if succesful

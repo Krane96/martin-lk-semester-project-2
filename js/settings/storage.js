@@ -1,14 +1,14 @@
-const tokenKey = "token";
+const jwcKey = "token";
 const userKey = "user";
 
 
 // making the functions exportable
 
-export function saveToken(token) {
-    localStorageSaving(tokenKey, token);
+export function saveJWC(token) {
+    localStorageSaving(jwcKey, token);
 };
-export function getToken() {
-    return getStorageData(tokenKey);
+export function getJWC() {
+    return getStorageData(jwcKey);
 };
 export function saveUser(user) {
     localStorageSaving(userKey, user);

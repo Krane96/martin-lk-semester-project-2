@@ -526,6 +526,7 @@ select{
     font-size: 1.4em;
     color: $textColor;
     padding-bottom: .5rem;
+    max-width: 170px;
 }
 #shopping-cart .cart-item .cart-content .price{
     font-size: 1.2em;
@@ -534,7 +535,7 @@ select{
 }
 
 .cart-content a{
-    color: rgb(18, 77, 150);
+    color: $hoverLinkColor;
 }
 .indicator{
     margin: auto;

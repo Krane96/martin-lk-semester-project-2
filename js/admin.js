@@ -1,4 +1,4 @@
-import { getToken } from "./settings/storage.js";
+import { getJWC } from "./settings/storage.js";
 import { clearLoginStorage } from "./settings/storage.js";
 import { getUsername } from "./settings/storage.js";
 import { strapiURL } from "./settings/strapi.js";
@@ -13,7 +13,7 @@ const id = params.get("id");
 const cartItem = getExistingCartItems();
 const cartHtml = document.querySelector('#shopping-cart')
 const imageURL = "http://localhost:1337";
-const token = getToken();
+const token = getJWC();
 
 navigationToggle();
 
@@ -122,7 +122,7 @@ async function addProduct(title, price, description) {
 
         const data = JSON.stringify({title: title, price: price, description: description});
 
-        const token = getToken();
+        const token = getJWC();
 
         const options = {
             method: "POST",

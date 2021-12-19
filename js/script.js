@@ -15,17 +15,11 @@ async function getStrapi() {
 
         console.log(strapiHero);
         
-        //Filter for featured products
-    
-
-         
         createHero(strapiHero);
         
     } catch (error) {
         console.log(error);
     }
-
-    
     
 };
 
