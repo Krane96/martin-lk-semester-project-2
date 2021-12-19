@@ -59,6 +59,7 @@ if(username){
  </div>
  
  `;
+ document.title = username;
 }
 
 loggedUser.innerHTML = `${authLink}`;

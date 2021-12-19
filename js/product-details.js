@@ -30,7 +30,8 @@ function createProductDetails (product) {
             </div>
             <div class="product-description">
             <h4>${product.title}</h4>
-            <p>${product.description}</h4>
+            <p>${product.description}</h4> <br>
+            <a href="products.html">&#10094; Back</a>
         </div>
             <div class="product-choices">
                 <h4>Choose your faction</h4>
@@ -65,13 +66,14 @@ function createProductDetails (product) {
                         <input type"text" placeholder="Character name"/>
                 <button data-image_url="${product.image_url}"data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart</button>
             </div>
+            
      </div>
      
-     <a href="products.html">&#10094; Back</a>
+     
     
 `
 productDetail.innerHTML = content;
-
+document.title =  "World of Boostcraft: " +  product.title;
 
 
 const removeButtons = document.querySelectorAll('.cart-content button');

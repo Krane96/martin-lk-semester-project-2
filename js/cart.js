@@ -59,3 +59,4 @@ function buttonClick() {
     
 }  
 
+document.title = "World of Boostcraft | " + "Cart"

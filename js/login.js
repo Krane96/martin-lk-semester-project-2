@@ -69,3 +69,4 @@ console.log(json);
     }
 }
 
+document.title = "World of Boostcraft | " + "Login"

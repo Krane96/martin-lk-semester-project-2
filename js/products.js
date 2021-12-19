@@ -42,3 +42,4 @@ export function createHTML(product){
 
 
 }
+document.title = "World of Boostcraft |" + " Products"

@@ -603,7 +603,8 @@ select {
 
 #shopping-cart {
   max-width: 35rem;
-  background: rgba(245, 245, 245, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(rgba(48, 39, 59, 0.29), rgba(0, 0, 0, 0.4));
   padding: 1rem 2rem;
   margin: 5rem auto;
   border-radius: 2px;
@@ -803,7 +804,8 @@ select {
 }
 
 .admin-form {
-  background-color: rgba(245, 245, 245, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(48, 39, 59, 0.29)), to(rgba(0, 0, 0, 0.4)));
+  background: linear-gradient(rgba(48, 39, 59, 0.29), rgba(0, 0, 0, 0.4));
   height: 450px;
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
