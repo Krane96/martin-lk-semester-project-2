@@ -1036,7 +1036,7 @@ h2 {
 
 .toggle-button {
   position: absolute;
-  top: 1.5rem;
+  top: 2.7rem;
   right: 1.5rem;
   display: none;
   -webkit-box-orient: vertical;
@@ -1208,7 +1208,7 @@ span {
   .header .navigation-icons {
     display: none;
     position: absolute;
-    top: .50rem;
+    top: 1.65rem;
     right: 5rem;
   }
   .navigation {
