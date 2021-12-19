@@ -1,9 +1,10 @@
 import { strapiURL } from "./settings/strapi.js";
 import { searchProduct } from "./components/search_filter.js";
-import { navigationToggle } from "./script.js";
+import { navigationToggle } from "./components/navigation.js";
 
 const productsURL = strapiURL + "products";
 
+navigationToggle();
 
 async function getStrapi() {
     
@@ -44,4 +45,3 @@ export function createHTML(product){
 
 }
 document.title = "World of Boostcraft |" + " Products"
-navigationToggle();

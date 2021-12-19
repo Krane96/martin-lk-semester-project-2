@@ -61,9 +61,9 @@ async function getProducts () {
     
     <div class="product-card">
         <a class="grid-card" href="products.html">
-        <h3>${featured[i].title}</h3>
-        <p>${featured[i].description}</p>
-        <span>${featured[i].price} £</span>
+        <h3>${featured.title}</h3>
+        <p>${featured.description}</p>
+        <span>${featured.price} £</span>
         <button>Learn more</button>
         </a>
     </div>

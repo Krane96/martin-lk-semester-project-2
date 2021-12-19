@@ -1242,8 +1242,7 @@ span {
     padding-right: 0;
   }
   .active-header {
-    background: -webkit-gradient(linear, left top, left bottom, from(#001524), to(#131212));
-    background: linear-gradient(#001524, #131212);
+    background: #020d20;
   }
   .header .navigation a {
     display: block;
