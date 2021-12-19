@@ -27,8 +27,6 @@ export function clearLoginStorage() {
     localStorage.removeItem("user");
 }
 
-// making the functions to retrieve everything
-
 function localStorageSaving(jwtData , value) {
     localStorage.setItem(jwtData, JSON.stringify(value));
 

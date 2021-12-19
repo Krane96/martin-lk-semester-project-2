@@ -40,8 +40,5 @@ export function createHTML(product){
     </div>`;  
     });
 
-    
-
-
 }
-document.title = "World of Boostcraft |" + " Products"
+document.title = "World of Boostcraft |" + " Products";

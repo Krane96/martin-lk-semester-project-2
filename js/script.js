@@ -4,9 +4,6 @@ const heroURL = strapiURL + "banner";
 const productsURL = strapiURL + "products";
 
 
-
-
-
 async function getStrapi() {
     
     try {
@@ -34,8 +31,6 @@ async function getStrapi() {
 
 getStrapi();
 
-
-
 async function getProducts () {
 
     const response = await fetch(productsURL);
@@ -55,7 +50,6 @@ async function getProducts () {
     for (let i = 0; i < featured.length; i++) {
 
         
-
     const products = document.querySelector('.products-container');
     products.innerHTML += ` 
     
@@ -73,9 +67,6 @@ async function getProducts () {
 
 getProducts();
 
-
-
-
 function createHero(hero){
     const headerElement = document.querySelector('.hero-header-container');
 
@@ -89,13 +80,8 @@ function createHero(hero){
     
 }
 
-
-
-
 /* Navigation */
 navigationToggle();
-
-
 
 const shopButton = document.querySelector('.shop-button').addEventListener('click', () => {
    location.href = "products.html";

@@ -15,10 +15,6 @@
 }
 
 
-
-
-
-
 @media (max-width: 1300px) {
     html{
         font-size: 90%;
@@ -33,18 +29,6 @@
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 @media (max-width: 1200px) {
     .hero-content{
         margin-top: 5rem;
@@ -55,11 +39,10 @@
     .hero-header-container .image-fade:before{
         height: 800px;
     }
+    .products-container{
+        grid-gap: 2rem;
+    }
 }
-
-
-
-
 
 
 @media (max-width: 1050px) {
@@ -108,9 +91,6 @@
     .active-header{
      background: #020d20;
     }
-
-    
-
 
     .header .navigation a{
         display: block;
@@ -174,8 +154,6 @@
     .products-container{
         grid-gap: 3rem;
     }
-    
-
 }
 
 @media (max-width: 720px) {
@@ -217,7 +195,6 @@
     }
 }
 
-
 @media (max-width: 620px) {
     html{
         font-size: 75%;
@@ -249,13 +226,11 @@
     .login-container{
         margin: 0 1.5rem;
     }
-    
 }
 
 @media (max-width: 470px) {
     .hero-text{
-        grid-column: 1/9;
-        
+        grid-column: 1/9; 
     }
     .footer-menu div, .footer-menu ul{
         margin: 0 .5rem;
@@ -278,7 +253,6 @@
     .admin-panel-row-1{
         justify-content: center;
     }
-
 }
 
 @media (max-width: 390px) {

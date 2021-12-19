@@ -65,13 +65,12 @@ function createProductDetails (product) {
                         <option>Blade's Edge    </option>
                         </select>
                         <input type"text" placeholder="Character name"/>
-                <button data-image_url="${product.image_url}"data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart</button>
+                <button data-image_url="${product.image_url}"data-description="${product.description}"data-title="${product.title}" data-price="${product.price}">Add to cart  £  ${product.price}</button>
+        
             </div>
             
      </div>
      
-     
-    
 `
 productDetail.innerHTML = content;
 document.title =  "World of Boostcraft: " +  product.title;

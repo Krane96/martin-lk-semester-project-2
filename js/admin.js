@@ -3,7 +3,7 @@ import { clearLoginStorage } from "./settings/storage.js";
 import { getUsername } from "./settings/storage.js";
 import { strapiURL } from "./settings/strapi.js";
 import displayMessage from "./components/login_message.js";
-import { getExistingCartItems } from "./components/get_cart_items.js";
+import { getExistingCartItems, saveCart } from "./components/get_cart_items.js";
 import { navigationToggle } from "./components/navigation.js";
 
 const queryString = document.location.search;
@@ -89,10 +89,6 @@ make.onclick = () => {
 }
 
 
-
-
-
-
 // Add product
 
 const formMake = document.querySelector("#update-form");
@@ -154,7 +150,7 @@ async function addProduct(title, price, description) {
 
 
 // update product
-
+/*
 const productUrl = strapiURL + "products/" + id;
 const formUpdate = document.querySelector('#make-form');
 const updateTitle = document.querySelector('.update-name');
@@ -178,11 +174,27 @@ const updateId = document.querySelector('.update-id');
         console.log(error);
     }
 })
-
-
-
+*/
 
 // cart 
+cartItem.forEach(addedCartItem => {
+    cartHtml.innerHTML += 
+    `
+    <div class="cart-item">
+        <span class="fas fa-times" data-image="${imageURL + addedCartItem.image_url}"data-description="${addedCartItem.description}"data-title="${addedCartItem.title}" data-price="${addedCartItem.price}"></span>
+        <img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img>
+        <div class="cart-content">
+            <h4>${addedCartItem.title}</h4>
+            <div class="price">${addedCartItem.price} £</div>
+            <a href="account.html?${addedCartItem.id}">Edit</a>
+            
+        </div> 
+    </div>
+    `;
+    
+});
+
+
 const removeButtons = document.querySelectorAll('.cart-item span');
 removeButtons.forEach((removeButton) => {
     removeButton.addEventListener('click', buttonClick);
@@ -212,20 +224,15 @@ function buttonClick() {
     
 } 
 
-cartItem.forEach(addedCartItem => {
-    cartHtml.innerHTML += 
-    `
-    <div class="cart-item">
-        <span class="fas fa-times" data-image="${imageURL + addedCartItem.image_url}"data-description="${addedCartItem.description}"data-title="${addedCartItem.title}" data-price="${addedCartItem.price}"></span>
-        <img src="${imageURL + addedCartItem.image}" alt="addedCartItem image"></img>
-        <div class="cart-content">
-            <h4>${addedCartItem.title}</h4>
-            <div class="price">${addedCartItem.price} £</div>
-            <a href="account.html?${addedCartItem.id}">Edit</a>
-            
-        </div> 
-    </div>
-    `;
-    
-});
+  
+for (let i = 0; i < cartItem.length; i++) {
+    const totalPriceHtml = document.querySelector('.total-price');
+    let total = 0;
+    totalPriceHtml.innerHTML = "";
+
+    total += parseInt (cartItem[i].price);
+    console.log(total);
+
+    totalPriceHtml.innerHTML = `Total price: ${total} £`
+};
 
