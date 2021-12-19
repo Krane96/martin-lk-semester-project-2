@@ -903,6 +903,10 @@ select {
   margin-bottom: .5rem;
 }
 
+.hide {
+  display: none;
+}
+
 h4 {
   font-family: "Fira Sans", sans-serif;
   font-size: 1.4em;
@@ -1191,7 +1195,7 @@ span {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 100%;
-    height: 200px;
+    height: 500px;
   }
   .header .navigation a {
     display: block;

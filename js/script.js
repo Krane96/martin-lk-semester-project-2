@@ -54,10 +54,7 @@ async function getProducts () {
 
     for (let i = 0; i < featured.length; i++) {
 
-
-        if (i === 3) {
-          break;
-        }
+        
 
     const products = document.querySelector('.products-container');
     products.innerHTML += ` 
@@ -97,11 +94,13 @@ function createHero(hero){
 
 /* Navigation */
 let navigation = document.querySelector('.navigation');
+let hero = document.querySelector('.hero-content');
 
 
 document.querySelector('.menu-icon').onclick = () =>{
     console.log(event);
     navigation.classList.toggle('active')
+    hero.classList.toggle('hide')
 };
 
 
