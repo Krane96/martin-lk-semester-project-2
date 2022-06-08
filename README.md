@@ -21,15 +21,17 @@ E-commerce site made by with vanilla JavaScript, HTML and CSS. This was a school
 
 ### Installing
 
-This is where you list how to get the project started. It typically just includes telling a person to clone the repo and then to install the dependencies e.g.
-
 1. Clone the repo:
 
 - Clone the repo however you would like to
-- Clone Strapi 
+
+2. Clone the Strapi:
+
+- You will also need to clone and run the Strapi locally
+-https://github.com/Krane96/strapi-sp2
 
 
-2. Install the dependencies:
+3. Install the dependencies:
 
 ```
 npm install
@@ -39,8 +41,15 @@ npm install
 
 To run the app, run the following commands:
 
+
 ```bash
-npm run dev
+npm start
+```
+
+You will need to run the strapi with the following command:
+
+```bash
+npm run develop
 ```
 
 ## Contact
